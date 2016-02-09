@@ -1,5 +1,6 @@
 $bf: $font-size-base
 $bl: $line-height-computed
+$grid-gutter-half: (( $grid-gutter-width / 2 ))
 
 =wh($width, $height)
   width: $width
@@ -126,3 +127,29 @@ $bl: $line-height-computed
     height: 0
   &::-webkit-scrollbar, &::-webkit-scrollbar-track, &::-webkit-scrollbar-thumb
     background: transparent
+
+// media queries
+=mq-xs
+  @media screen and (max-width: #{$screen-xs-max})
+    @content
+=mq-sm
+  @media screen and (max-width: #{$screen-sm-max})
+    @content
+=mq-md
+  @media screen and (max-width: #{$screen-md-max})
+    @content
+=mq-sm-up
+  @media screen and (min-width: #{$screen-sm})
+    @content
+=mq-md-up
+  @media screen and (min-width: #{$screen-md})
+    @content
+=mq-lg-up
+  @media screen and (min-width: #{$screen-lg})
+    @content
+=mq-sm-only
+  @media screen and (min-width: #{$screen-sm}) and (max-width: #{$screen-sm-max})
+    @content
+=mq-md-only
+  @media screen and (min-width: #{$screen-md}) and (max-width: #{$screen-md-max})
+    @content
