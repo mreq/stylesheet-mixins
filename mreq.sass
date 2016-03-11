@@ -117,6 +117,21 @@ $grid-gutter-half: (( $grid-gutter-width / 2 ))
   -ms-flex-wrap: $wrap
   flex-wrap: $wrap
 
+=flex-order($order: 1)
+  -webkit-order: $order
+  -ms-order: $order
+  order: $order
+
+=flex-direction($direction: column)
+  -webkit-flex-direction: $direction
+  -ms-flex-direction: $direction
+  flex-direction: $direction
+
+=flex-shrink($shrink: 0)
+  -webkit-flex-shrink: $shrink
+  -ms-flex-shrink: $shrink
+  flex-shrink: $shrink
+
 =no-outline
   &, &:hover, &:active
     outline: 0
